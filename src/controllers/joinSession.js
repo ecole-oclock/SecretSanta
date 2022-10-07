@@ -12,6 +12,20 @@ export default async ({ ack, payload, body, client, logger }) => {
     const { value: sessionID } = payload;
 
     const session = await sessionRepository.fetchById(sessionID);
+    if (!session) {
+      return client.views.open({
+        channel: channelID,
+        trigger_id: triggerID,
+        view: modals.showError('Ho Ho Ho :santa: Cette session de secret santa n\'existe pas !').buildToJSON(),
+      }).catch((error) => logger.error(error));
+    }
+    if (session.mixDone) {
+      return client.views.open({
+        channel: channelID,
+        trigger_id: triggerID,
+        view: modals.showError('Ho Ho Ho :santa: Les secret santa ont déjà été attribués tu arrives trop tard ! C\'est balot hein ?').buildToJSON(),
+      }).catch((error) => logger.error(error));
+    }
     const participant = await session.participants?.get?.(body.user?.id);
 
     if (session.startedAt && !dayjs(session.startedAt).isSame(dayjs(), 'year')) {

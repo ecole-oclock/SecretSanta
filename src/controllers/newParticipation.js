@@ -13,6 +13,20 @@ export default async ({ ack, payload, view, body, client, logger }) => {
 
   try {
     const session = await sessionRepository.fetchById(sessionID);
+    if (!session) {
+      return client.views.open({
+        channel: channelID,
+        trigger_id: triggerID,
+        view: modals.showError('Ho Ho Ho :santa: Cette session de secret santa n\'existe pas ! Mais comment t\'a fais ça ?').buildToJSON(),
+      }).catch((error) => logger.error(error));
+    }
+    if (session.mixDone) {
+      return client.views.open({
+        channel: channelID,
+        trigger_id: triggerID,
+        view: modals.showError('Ho Ho Ho :santa: Les secret santa on déjà été attribués tu arrives trop tard ! C\'est balot hein ?').buildToJSON(),
+      }).catch((error) => logger.error(error));
+    }
     await session.addParticipant(body.user);
 
     if (session.secretSantaChannel) {

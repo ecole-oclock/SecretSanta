@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import dayjs from 'src/utils/dayjs';
 import logger from 'src/utils/logger';
 import { messages } from 'src/views';
 
@@ -10,6 +11,8 @@ const ParticipantSchema = new Schema({
     unique: true,
     index: true,
   },
+  secretSanta: Types.String,
+  victim: Types.String,
   username: Types.String,
   name: Types.String,
   subscribedAt: Types.Date,
@@ -30,7 +33,28 @@ const SessionSchema = new Schema({
     type: Types.Date,
     default: new Date(),
   },
-  year: Types.Number,
+  mixDate: {
+    type: Types.Date,
+    default: dayjs()
+      .day(13)
+      .month(9)
+      .hour(12)
+      .minute(30)
+      .toDate(),
+  },
+  mixDone: {
+    type: Types.Boolean,
+    default: false,
+  },
+  finished: {
+    type: Types.Boolean,
+    default: false,
+  },
+  year: {
+    type: Types.Number,
+    unique: true,
+    default: Number(dayjs().format('YYYY')),
+  },
   startTSMessage: Types.String,
   participants: {
     type: Types.Map,

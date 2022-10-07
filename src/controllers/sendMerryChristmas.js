@@ -1,7 +1,7 @@
 /* eslint-disable prefer-destructuring */
 import * as Sentry from '@sentry/node';
 import { sessionRepository } from 'src/models/session';
-import { mixSecretSanta } from 'src/scripts';
+import { sendMerryChristmasMessage } from 'src/scripts';
 import dayjs from 'src/utils/dayjs';
 import logger from 'src/utils/logger';
 
@@ -21,7 +21,17 @@ export default async ({ ack, respond, payload }) => {
     if (payload.user_id !== session.creator) {
       throw new Error('Ho Ho Ho :santa: Seul le créateur de cette session peut faire ça petit coquin :wink: Je t\'ajoute à la liste des enfant pas sâges ?:x: :gift:');
     }
-    return await mixSecretSanta();
+
+    if (!session.mixDone) {
+      throw new Error('Ho Ho Ho :santa: Les secret santa n\'ont même pas encoré été trouvé, tu vas un peu vite !');
+    }
+
+    if (session.finished) {
+      throw new Error('Ho Ho Ho :santa: Cette session de secret santa est déjà terminée, tu ne peux pas renvoyer le message !');
+    }
+
+
+    return await sendMerryChristmasMessage();
   } catch (error) {
     respond(error.message);
     logger.error(error);
