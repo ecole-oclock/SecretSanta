@@ -1,8 +1,6 @@
-export default (app) => {
-  app.event(async ({ message, say }) => {
-    // say() sends a message to the channel where the event was triggered
-    await say(`Hey there <@${message.user}>!`);
-  });
+import * as controllers from 'src/controllers';
 
+export default (app) => {
+  app.event('app_home_opened', controllers.appHomeOpened);
   return app;
 };
