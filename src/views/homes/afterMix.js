@@ -15,7 +15,7 @@ export default (session, participant, victim) => HomeTab()
       text: 'Les informations de ta victime',
     }),
     Blocks.Section({
-      text: `Pour rappel voici ce que *ta victime* as indiqué pour ton Secret Santa :santa:`,
+      text: `Pour rappel voici ce que <@${participant.victim}> as indiqué pour ton Secret Santa :santa:`,
     }),
     Blocks.Section({
       text: `:shirt: Sa taille de vêtements est *${victim.clothesSize}* `,
