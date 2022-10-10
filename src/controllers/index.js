@@ -6,3 +6,5 @@ export { default as sendMerryChristmas } from './sendMerryChristmas';
 export { default as sendMessageSecretSanta } from './sendMessageSecretSanta';
 export { default as newSecretSantaMessage } from './newSecretSantaMessage';
 export { default as appHomeOpened } from './appHomeOpened';
+export { default as sendRelanceFindGift } from './sendRelanceFindGift';
+export { default as sendRelanceSessionInscription } from './sendRelanceSessionInscription';
