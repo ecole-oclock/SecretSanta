@@ -60,4 +60,15 @@ export default (session, participant, victim) => HomeTab()
           value: participant.id,
         }).primary(true),
       ),
+    Blocks.Actions()
+      .elements(
+        Elements.Button({
+          text: `Message à ma victime`,
+          actionId: 'new_message_victim',
+          value: participant.id,
+        }).primary(true),
+      ),
+    Blocks.Section({
+      text: `:warning: *Attention ne transmet pas d'information qui pourrait faire comprendre qui tu es :wink:*`,
+    }),
   );
