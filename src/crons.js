@@ -1,4 +1,4 @@
-import * as asyncForEach from 'async-await-foreach';
+import asyncForEach from 'async-await-foreach';
 import cron from 'node-cron';
 import { sessionRepository } from 'src/models/session';
 import { mixSecretSanta, sendMerryChristmasMessage, relanceSessionInscription, relanceFindGift } from 'src/scripts';
