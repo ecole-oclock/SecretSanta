@@ -25,7 +25,7 @@ export default async ({ ack, view, body, client, logger }) => {
 
     await client.chat.postMessage({
       channel: participant.victim,
-      text: `Hello <@${participant.secretSanta}> ta Secret Santa <@${participant.id}> a un message à te transmettre, le voici :\n*${message}*`,
+      text: `Hello <@${participant.victim}> ton Secret Santa a un message à te transmettre, le voici :\n*${message}*`,
     });
     return client.chat.postMessage({
       channel: participant.id,
