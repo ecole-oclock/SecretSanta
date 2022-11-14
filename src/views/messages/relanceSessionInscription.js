@@ -8,7 +8,7 @@ export default (session) => (
     Blocks.Section({ text: `Encore *${
       dayjs()
         .day(23)
-        .month(11)
+        .month(12)
         .hour(0)
         .minute(0)
         .second(0)
