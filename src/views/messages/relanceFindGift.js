@@ -5,15 +5,7 @@ export default () => (
   Message().blocks(
     Blocks.Section({ text: `Ho Ho Ho <!here> :santa::skin-tone-2:`, type: 'mrkdwn' }),
     Blocks.Header({ text: `Qui qui a oublié a pas trouvé son cadeau ?`, type: 'mrkdwn' }),
-    Blocks.Section({ text: `Encore *${
-      dayjs()
-        .day(23)
-        .month(12)
-        .hour(0)
-        .minute(0)
-        .second(0)
-        .diff(dayjs(), 'day')
-    } jours* avant Noël ! :christmas_tree:  Si si !\n`,
+    Blocks.Section({ text: `Encore *${dayjs(`${dayjs().format('YYYY')}-12-24`, 'YYYY-MM-DD').diff(dayjs(), 'day')} jours* avant Noël ! :christmas_tree:  Si si !\n`,
     }),
     Blocks.Header({
       text: `Le Bot SecretSanta est là pour te rappeler de trouver un cadeau pour ta victime !`,
