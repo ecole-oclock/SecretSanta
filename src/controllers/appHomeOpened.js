@@ -12,7 +12,7 @@ export default async ({ event }) => {
   let blocks = null;
   if (!session) {
     blocks = homes.noSession();
-  } if (!session.participants.get(userSlackID)) {
+  } else if (!session.participants.get(userSlackID)) {
     blocks = homes.notSubscribed(session);
   } else if (!session.mixDone) {
     blocks = homes.beforeMix(session, session.participants.get(userSlackID));
