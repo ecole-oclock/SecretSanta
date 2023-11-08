@@ -7,14 +7,14 @@ export default ({ channel, session }) => (
     Blocks.Section({ text: `:bell: Il y a des enfants sages <!here> ?` }),
     Blocks.Section({ text: `Vous savez pas quoi ? Dans *${
       dayjs()
-        .day(23)
+        .date(23)
         .month(11)
         .hour(0)
         .minute(0)
         .second(0)
         .diff(dayjs(), 'day')
     } jours* c'est Noël ! :christmas_tree:  Si si !\n`
-    + `Et chez O'clock quand on approche de Noël il se passe quoi ? Et bah on se fait des *cadeaux* ! :gift:\n`
+    + `Et chez nous quand on approche de Noël il se passe quoi ? Et bah on se fait des *cadeaux* ! :gift:\n`
     + `Pantoufles, Pull moche de noel, jeux de société et autre goodies de Noël n'ont qu'à bien se tenir car il est temps de s'inscrire ! ( Ouaa ça rime ! :star-struck:  )`,
     }),
     Blocks.Section({ text: `Le secret santa, c'est quoi ça ? Secret Santa, ou Noël canadien au Québec`

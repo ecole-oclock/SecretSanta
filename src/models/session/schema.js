@@ -36,7 +36,7 @@ const SessionSchema = new Schema({
   mixDate: {
     type: Types.Date,
     default: dayjs()
-      .day(13)
+      .date(13)
       .month(9)
       .hour(12)
       .minute(30)

@@ -126,7 +126,7 @@ const initKeycloak = () => {
   };
 };
 
-// Récupère la lib keyclock sur le provider O'clock
+// Récupère la lib keyclock sur le provider
 getScript(`${keycloakBaseUrl}js/keycloak.js`)
   .then(() => {
     initKeycloak();
