@@ -6,7 +6,7 @@ export default (session) => {
       text: `Ho Ho Ho <!here> :santa:` }),
     Blocks.Header({ type: 'mrkdwn', text: 'Joyeux Noël :gift: :christmas_tree: :santa:  !!' }),
     Blocks.Section({ type: 'mrkdwn',
-      text: `C'est le jour J ! Je vous souhaites à tous un très joyeux noel plein de cadeaux :gift: et plein d'amour :love_letter: ` }),
+      text: `C'est le jour J ! Je vous souhaite à tous un très joyeux noel plein de cadeaux :gift: et plein d'amour :love_letter: ` }),
     Blocks.Section({ type: 'mrkdwn',
       text: `Cette année nous étions *${session.participants?.size} participants* au secret santa ! :tada:` }),
     Blocks.Section({
