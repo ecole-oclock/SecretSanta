@@ -3,7 +3,7 @@ import { Message, Blocks } from 'slack-block-builder';
 export default (session, secretSantaVictim) => {
   const blocks = [
     Blocks.Section({ type: 'mrkdwn',
-      text: `Bonjour à toi cher Père Noël Secret de la péda :santa: !` }),
+      text: `Bonjour à toi cher Père Noël Secret :santa: !` }),
     Blocks.Header({ type: 'mrkdwn',
       text: `Le grand tirage au sort t'a trouvé un secret Santa !` }),
     Blocks.Section({ type: 'mrkdwn',
@@ -61,7 +61,7 @@ export default (session, secretSantaVictim) => {
     }),
     Blocks.Section({
       type: 'mrkdwn',
-      text: `J'ai hâte de voir ce que le Père Noël de la péda va t'apporter :heart_decoration: ! Toi aussi ?`,
+      text: `J'ai hâte de voir ce que le Père Noël va t'apporter :heart_decoration: ! Toi aussi ?`,
     }),
     Blocks.Section({
       type: 'mrkdwn',
