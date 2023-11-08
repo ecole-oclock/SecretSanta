@@ -21,7 +21,7 @@ export default (session) => {
       type: 'mrkdwn',
       text: `Des bisoux à tous ! :kissing_heart: Et passez un bon réveillon de noel !`,
     }),
-    Blocks.Image({ imageUrl: 'https://media.giphy.com/media/uq18vpwuuW2M2IWm89/giphy.gif', altText: 'Merry christmas' }),
+    Blocks.Image({ imageUrl: 'https://media.tenor.com/tF7QYiNQc4sAAAAd/merry-christmas-wrecking-ball.gif', altText: 'Merry christmas' }),
   ];
 
   return (

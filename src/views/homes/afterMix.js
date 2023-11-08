@@ -50,7 +50,7 @@ export default (session, participant, victim) => HomeTab()
     }),
     Divider(),
     Blocks.Section({
-      text: `Si jamais tu veux changer ces informations, c'est trop tard fallait se bouger les fesses avant :grin:\nBon quand même je suis gentil tu peux envoyer un message à ton Secret Santa avec ce bouton mais tu sauras pas à qui je l'envoi :smirk:`,
+      text: `Si jamais tu veux changer ces informations, c'est trop tard fallait se bouger les fesses avant :grin:\nBon quand même je suis gentil tu peux envoyer un message à ton Secret Santa avec ce bouton mais tu ne sauras pas à qui je l'envoie :smirk:`,
     }),
     Blocks.Actions()
       .elements(

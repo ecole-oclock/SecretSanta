@@ -4,7 +4,7 @@ import dayjs from 'src/utils/dayjs';
 export default () => (
   Message().blocks(
     Blocks.Section({ text: `Ho Ho Ho <!here> :santa::skin-tone-2:`, type: 'mrkdwn' }),
-    Blocks.Header({ text: `Qui qui a oublié a pas trouvé son cadeau ?`, type: 'mrkdwn' }),
+    Blocks.Header({ text: `Qui qui a oublié ou n'a pas trouvé son cadeau ?`, type: 'mrkdwn' }),
     Blocks.Section({ text: `Encore *${dayjs(`${dayjs().format('YYYY')}-12-24`, 'YYYY-MM-DD').diff(dayjs(), 'day')} jours* avant Noël ! :christmas_tree:  Si si !\n`,
     }),
     Blocks.Header({
