@@ -11,10 +11,10 @@ export default async ({ ack, respond, payload, logger, client }) => {
 
   try {
     let mixDate = dayjs()
-      .day(13)
-      .month(9)
+      .date(15)
+      .month(10)
       .hour(12)
-      .minute(30);
+      .minute(30); // le 15/11 à 12h30 par défaut
 
     if (payload.text.trim()) {
       mixDate = dayjs(payload.text.trim())

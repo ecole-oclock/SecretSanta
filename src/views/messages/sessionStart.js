@@ -7,14 +7,14 @@ export default ({ channel, session }) => (
     Blocks.Section({ text: `:bell: Il y a des enfants sages <!here> ?` }),
     Blocks.Section({ text: `Vous savez pas quoi ? Dans *${
       dayjs()
-        .day(23)
+        .date(23)
         .month(11)
         .hour(0)
         .minute(0)
         .second(0)
         .diff(dayjs(), 'day')
     } jours* c'est Noël ! :christmas_tree:  Si si !\n`
-    + `Et chez O'clock quand on approche de Noël il se passe quoi ? Et bah on se fait des *cadeaux* ! :gift:\n`
+    + `Et chez nous quand on approche de Noël il se passe quoi ? Et bah on se fait des *cadeaux* ! :gift:\n`
     + `Pantoufles, Pull moche de noel, jeux de société et autre goodies de Noël n'ont qu'à bien se tenir car il est temps de s'inscrire ! ( Ouaa ça rime ! :star-struck:  )`,
     }),
     Blocks.Section({ text: `Le secret santa, c'est quoi ça ? Secret Santa, ou Noël canadien au Québec`
@@ -22,12 +22,12 @@ export default ({ channel, session }) => (
     + ` lors de laquelle les membres d'un groupe ou d'une communauté s'offrent au hasard des cadeaux.`
     + ` Le tirage au sort est anonyme.`,
     }),
-    Blocks.Section({ text: `Si toi aussi t'a envie de faire un *cadeau* sans te ruiner et d'en avoir un en retour,`
+    Blocks.Section({ text: `Si toi aussi t'as envie de faire un *cadeau* sans te ruiner et d'en avoir un en retour,`
     + ` il te suffit de cliquer sur le bouton ci-dessous, de remplir le formulaire et je reviendrais vers toi un`
     + ` peu plus tard pour te dire qui est ~ta victime~ celui ou celle qui recevra ton *merveilleux* cadeau :gift:  !`,
     }),
     Blocks.Header({
-      text: `Attention ! Tu n'a que jusqu'à ${dayjs(session.mixDate).format('LLLL')} dernier délais pour t'inscrire !`,
+      text: `Attention ! Tu n'as que jusqu'à ${dayjs(session.mixDate).format('LLLL')} dernier délai pour t'inscrire !`,
     }),
     Blocks.Section({
       text: `Sinon *tu ne pourras plus participer* ! Et comme je suis un bot, tu pourras râler tout ce que tu veux, ça ne changera rien :grin:`,
@@ -41,7 +41,7 @@ export default ({ channel, session }) => (
         }).primary(true),
       ),
     Blocks.Section({
-      text: `Une fois que tu te sera inscrit et que tu aura remplis le formulaire je vais te faire entrer dans le canal #secret-santa-${session.year} pour te tenir informer de la suite, *je s'occupe de tout tu s'occupe de rien !*`,
+      text: `Une fois que tu te seras inscrit et que tu auras remplis le formulaire je vais te faire entrer dans le canal #secret-santa-${session.year} pour te tenir informé de la suite, *je s'occupe de tout tu s'occupe de rien !*`,
     }),
     Blocks.Section({ text: `Allez ! À bientôt :wave: :sled: ` }),
     Blocks.Image({ imageUrl: 'https://media.giphy.com/media/3lsNKXm6IUS3K/giphy.gif', altText: 'Santa is comming !' }),
